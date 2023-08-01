@@ -1,0 +1,48 @@
+{
+    "env": {
+        "projectIncludePaths": [
+            "${workspaceFolder}",
+            "/usr/lib/llvm-15/include/"
+        ],
+        "projectDefines": [
+            "CPPAST_VERSION_STRING",
+            "CPPAST_CLANG_VERSION_STRING"
+        ]
+    },
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${projectIncludePaths}",
+                "${default}"
+            ],
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "c99",
+            "cppStandard": "gnu++14",
+            "defines": [
+                "${projectDefines}"
+            ]
+        },
+        {
+            "name": "OSX",
+            "includePath": [
+                "${projectIncludePaths}",
+                "${default}"
+            ],
+            "compilerPath": "/usr/bin/clang",
+            "cStandard": "c99",
+            "cppStandard": "gnu++14"
+        },
+        {
+            "name": "Win32",
+            "includePath": [
+                "${projectIncludePaths}",
+                "${default}"
+            ],
+            "compilerPath": "cl.exe",
+            "cStandard": "c99",
+            "cppStandard": "c++14"
+        }
+    ],
+    "version": 4
+}
